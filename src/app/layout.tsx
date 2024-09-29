@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-// import Header from "@/Components/Client/Header";
-import { Parallax_Provider } from "@/Components/Client/Provider_Parallax";
+import Header from "@/Components/Client/Header";
 
 export const metadata: Metadata = {
   title: "Khizer hussain",
@@ -17,8 +16,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <main>
-          {/* <Header /> */}
-          <Parallax_Provider>{children}</Parallax_Provider>
+          <Header />
+          <main>{children}</main>
         </main>
       </body>
     </html>
