@@ -1,19 +1,20 @@
-"use client";
-import HeroSection from "@/Components/Client/Hero";
-import AboutMe from "@/Components/Server/About";
-import Footer from "@/Components/Server/Footer";
-import Services from "@/Components/Server/Service";
-import { ParallaxProvider } from "react-scroll-parallax";
+import dynamic from "next/dynamic";
+const HeroSection = dynamic(() => import("@/Components/Client/Hero"), {
+  ssr: false,
+});
+const AboutMe = dynamic(() => import("@/Components/Server/About"), {
+  ssr: false,
+});
+const Services = dynamic(() => import("@/Components/Server/Service"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
-    <ParallaxProvider>
-      <div className="overflow-x-hidden">
-        <HeroSection />
-        <AboutMe />
-        <Services />
-        <Footer />
-      </div>
-    </ParallaxProvider>
+    <>
+      <HeroSection />
+      <AboutMe />
+      <Services />
+    </>
   );
 }

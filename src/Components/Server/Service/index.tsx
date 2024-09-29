@@ -1,28 +1,44 @@
 "use client";
 import { servicesDataArray } from "@/Data/header";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import CustomImage from "../CustomImage";
-import { motion } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const skillVariants = {
-  hidden: { y: 100, opacity: 0 }, // Start 100px below and hidden
+  hidden: { y: 150, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
-    transition: { type: "spring", stiffness: 50, damping: 20, duration: 2 }, // 2 seconds transition
+    transition: {
+      type: "spring",
+      stiffness: 50,
+      damping: 20,
+      duration: 2,
+      delay: 0.25,
+    },
   },
 };
 
 const Services = () => {
+  const controls = useAnimation();
+  const ref = useRef<HTMLDivElement | null>(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    }
+  }, [isInView, controls]);
+
   return (
-    <section id="services" className="py-20 bg-gray-100">
+    <section id="services" className="py-20 bg-gray-100" ref={ref}>
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold mb-10 text-gray-600">My Services</h2>
         <div className="flex flex-wrap align-middle justify-center w-full">
           <motion.div
             variants={skillVariants}
             initial="hidden"
-            animate="visible"
+            animate={controls}
             className="flex flex-wrap align-middle justify-center w-full"
           >
             {servicesDataArray.map((service: any, i: number) => (

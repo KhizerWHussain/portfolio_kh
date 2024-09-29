@@ -1,8 +1,6 @@
 "use client";
-// import CustomImage from "@/Components/Server/CustomImage";
 import React from "react";
-import { ParallaxProvider, ParallaxBanner } from "react-scroll-parallax";
-// import myImage from "../../../../assets/images/myimage.jpeg";
+import { ParallaxProvider } from "react-scroll-parallax";
 import Writing from "@/Components/Server/TypeWriter";
 import { motion } from "framer-motion";
 import style from "../../../app/layout.module.css";
@@ -29,23 +27,26 @@ const HeroSection = () => {
       >
         <div className="flex flex-col md:flex-row w-full h-full justify-between">
           <motion.div
-            className="text-[40px] mb-8 md:mb-0 items-center align-middle justify-center flex flex-col"
+            className="text-[40px] mb-8 md:mb-0 items-center align-middle justify-center flex flex-col w-full h-full"
             variants={textVariants}
             initial="hidden"
             animate="visible"
           >
-            <div>
-              Hello, I am <span className="text-primary">Khizer Hussain</span>
+            <div className="w-full text-[28px] md:text-[42px] flex gap-2 justify-center md:justify-start">
+              <span>Hello, I am </span>
+              <span className="text-primary">Khizer Hussain</span>
             </div>
-            <Writing
-              runInLoop={true}
-              useCursor={true}
-              words={[
-                "Frontend Developer",
-                "Backend Developer",
-                "Full Stack Web Developer",
-              ]}
-            />
+            <div className="w-full text-[28px] md:text-[42px] flex justify-center md:justify-start">
+              <Writing
+                runInLoop={true}
+                useCursor={true}
+                words={[
+                  "Frontend Developer",
+                  "Backend Developer",
+                  "Full Stack Web Developer",
+                ]}
+              />
+            </div>
           </motion.div>
           <div className={`${style.myImage}`} />
         </div>

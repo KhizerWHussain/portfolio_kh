@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
-    "build": "next build",
+    "build": "rm -rf .next && next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -17,6 +17,7 @@
     "react-scroll": "^1.9.0",
     "react-scroll-parallax": "^3.4.5",
     "react-simple-typewriter": "^5.0.1",
+    "sharp": "^0.33.5",
     "tailwind": "^4.0.0"
   },
   "devDependencies": {

@@ -7,6 +7,9 @@ const nextConfig = {
   productionBrowserSourceMaps: false,
   optimizeFonts: true,
   output: "standalone",
+  poweredByHeader: false,
+  excludeDefaultMomentLocales: true,
+  reactStrictMode: true,
 };
 
 export default nextConfig;

@@ -21,6 +21,9 @@ body {
 
   scrollbar-color: transparent #e31b6d;
   scrollbar-width: thin;
+  scroll-behavior: smooth;
+  scroll-margin: 0;
+  scroll-padding: 0;
 }
 
 @layer utilities {
