@@ -5,8 +5,6 @@ import Properties from "./properties";
 import dynamic from "next/dynamic";
 const Profile = dynamic(() => import("./profile"));
 const Tabber = dynamic(() => import("./tabber"));
-// import Profile from "./profile";
-// import Tabber from "./tabber";
 import { useAnimation, useInView } from "framer-motion";
 import { motion } from "framer-motion";
 

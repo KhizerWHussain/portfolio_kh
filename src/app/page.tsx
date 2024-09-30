@@ -8,6 +8,9 @@ const AboutMe = dynamic(() => import("@/Components/Server/About"), {
 const Services = dynamic(() => import("@/Components/Server/Service"), {
   ssr: false,
 });
+const Contact = dynamic(() => import("@/Components/Client/Contact"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
@@ -15,6 +18,7 @@ export default function Home() {
       <HeroSection />
       <AboutMe />
       <Services />
+      <Contact />
     </>
   );
 }
