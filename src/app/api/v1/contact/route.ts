@@ -10,7 +10,10 @@ export async function POST(req: Request) {
         user: process.env.GMAIL_USER,
         pass: process.env.GMAIL_PASS,
       },
+      secure: false,
     });
+
+    console.log("req =>", req);
 
     const mailOptions = {
       from: process.env.GMAIL_USER, // Always your email
