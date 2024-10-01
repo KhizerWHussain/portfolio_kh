@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  distDir: ".next",
   compress: true,
   crossOrigin: "anonymous",
   cacheMaxMemorySize: 0,
@@ -10,6 +11,12 @@ const nextConfig = {
   poweredByHeader: false,
   excludeDefaultMomentLocales: true,
   reactStrictMode: true,
+  experimental: {
+    caseSensitiveRoutes: false,
+    optimizeServerReact: true,
+    scrollRestoration: true,
+  },
+  trailingSlash: false,
 };
 
 export default nextConfig;

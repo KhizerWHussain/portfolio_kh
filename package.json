@@ -9,10 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@linaria/babel-preset": "^5.0.4",
+    "@linaria/core": "^6.2.0",
+    "@linaria/react": "^6.2.1",
+    "@next/bundle-analyzer": "^14.2.13",
     "@sendgrid/mail": "^8.1.3",
     "axios": "^1.7.7",
     "firebase": "^10.13.2",
     "framer-motion": "^11.9.0",
+    "git-filter-repo": "^0.0.30",
+    "linaria": "^6.2.0",
     "next": "14.2.13",
     "nodemailer": "^6.9.15",
     "react": "^18",

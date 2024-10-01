@@ -20,5 +20,9 @@ const config: Config = {
     },
   },
   plugins: [],
+  experimental: {
+    optimizeUniversalDefaults: true,
+    matchVariant: true,
+  },
 };
 export default config;
