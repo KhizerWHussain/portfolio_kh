@@ -12,6 +12,8 @@ const Contact = dynamic(() => import("@/Components/Client/Contact"), {
   ssr: false,
 });
 
+// console.log("hoem page")
+
 export default function Home() {
   return (
     <>
