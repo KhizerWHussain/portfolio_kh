@@ -17,6 +17,15 @@ const nextConfig = {
     scrollRestoration: true,
   },
   trailingSlash: false,
+  images: {
+    remotePatterns: [
+      {
+        hostname: "*",
+        protocol: "https",
+      }
+    ]
+  
+  }
 };
 
 export default nextConfig;

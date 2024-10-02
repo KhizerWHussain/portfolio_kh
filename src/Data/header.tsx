@@ -149,9 +149,136 @@ export const footerDataArray = [
     icon: <TbBrandGithubFilled color="white" fontSize={20} />,
     link: "https://github.com/KhizerWHussain",
   },
-  // {
-  //   id: 3,
-  //   icon: null,
-  //   link: "https://www.linkedin.com/in/khizer-hussain-65b1171ba/",
-  // },
+];
+
+// projects section data here
+export const portfolioDataArray = [
+  {
+    id: 1,
+    name: "Fluospeak",
+    companyProject: true,
+    slug: "fluospeak",
+    type: "frontend",
+    thumbnail: "",
+    links: [
+      {
+        url: "",
+        icon: null,
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: "Lucidus",
+    companyProject: true,
+    slug: "lucidus",
+    type: "frontend",
+    thumbnail: "",
+    links: [
+      {
+        url: "",
+        icon: null,
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: "INYE",
+    companyProject: true,
+    slug: "inye",
+    type: "frontend",
+    thumbnail: "",
+    links: [
+      {
+        url: "",
+        icon: null,
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: "Techverticks",
+    companyProject: true,
+    slug: "techverticks",
+    type: "frontend",
+    thumbnail: "",
+    links: [
+      {
+        url: "",
+        icon: null,
+      },
+    ],
+  },
+  {
+    id: 5,
+    name: "NMO Academy",
+    companyProject: true,
+    slug: "nmo",
+    type: "frontend",
+    thumbnail: "",
+    links: [
+      {
+        url: "",
+        icon: null,
+      },
+    ],
+  },
+  {
+    id: 6,
+    name: "Sellers Route",
+    companyProject: true,
+    slug: "sellers_route",
+    type: "backend",
+    thumbnail: "",
+    links: [
+      {
+        url: "",
+        icon: null,
+      },
+    ],
+  },
+  {
+    id: 7,
+    name: "Planzee",
+    companyProject: true,
+    slug: "planzee",
+    type: "backend",
+    thumbnail: "",
+    links: [
+      {
+        url: "",
+        icon: null,
+      },
+    ],
+  },
+  {
+    id: 8,
+    name: "28",
+    companyProject: true,
+    slug: "28_shopify",
+    type: "frontend",
+    thumbnail: "",
+    techUsed: ["next.js", "tailwind", "framer-motion"],
+    links: [
+      {
+        url: "",
+        icon: null,
+      },
+    ],
+  },
+  {
+    id: 9,
+    name: "Todo App",
+    companyProject: false,
+    slug: "todo_app",
+    type: "frontend",
+    thumbnail: "",
+    techUsed: ["react", "redux"],
+    links: [
+      {
+        url: "",
+        icon: null,
+      },
+    ],
+  },
 ];
