@@ -16,7 +16,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+      setScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <header
       className={`${
-        scrolled || menuOpen ? "bg-black text-white z-50" : "bg-transparent z-0"
+        scrolled ? "bg-black text-white z-50" : "bg-transparent z-0"
       } flex justify-between w-full items-center h-20 pt-12 pb-12 sticky top-0 pr-6 pl-6 md:pr-36 md:pl-36 transition-colors duration-500 overflow-hidden`}
     >
       <div className="text-lg font-bold text-[24px] w-full">

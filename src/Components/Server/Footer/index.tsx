@@ -11,11 +11,17 @@ const Footer = () => {
             key={i}
             href={item.link}
             target="_blank"
-            className="flex cursor-pointer bg-gray-600 align-middle justify-between text-center items-center p-4 w-14 h-14 rounded-md hover:bg-secondary"
+            className="relative flex cursor-pointer bg-gray-600 text-center items-center justify-center w-12 h-12 rounded-md transition-all duration-500 group overflow-hidden hover:bg-secondary"
           >
-            <div className="justify-center align-middle items-center text-center">
+            {/* Initial icon */}
+            <span className="absolute text-white text-xl transition-transform duration-500 transform group-hover:-translate-y-80">
               {item.icon}
-            </div>
+            </span>
+
+            {/* Hover icon */}
+            <span className="absolute text-xl transition-transform duration-500 transform translate-y-80 group-hover:translate-y-0 ">
+              {item.icon}
+            </span>
           </Link>
         ))}
       </div>
