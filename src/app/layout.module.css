@@ -1,12 +1,12 @@
 .myImage {
   background-image: url("../../assets/images/image-reverse.png");
+  /* background-image: url("../../assets/images/image_new.png"); */
   object-fit: contain; /* Ensure the image fits within its container */
   background-attachment: fixed; /* Parallax fixed effect */
   background-position: right; /* Center the image */
   background-repeat: no-repeat; /* Don't repeat the image */
   background-size: contain; /* Keep the image within its bounds without zooming */
-  height: 100%;
+  height: 100vh;
   position: relative;
   width: 100%;
-  /* color: #000; */
 }

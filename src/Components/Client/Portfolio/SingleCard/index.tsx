@@ -11,7 +11,6 @@ const Project = ({ item }: any) => {
         <BackCard item={item} />
       </div>
     </div>
-    // <div className={style.box}>content inside</div>
   );
 };
 

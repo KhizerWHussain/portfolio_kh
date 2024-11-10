@@ -2,28 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+} */
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-
   scrollbar-color: transparent #e31b6d;
   scrollbar-width: thin;
   scroll-behavior: smooth;
-  scroll-margin: 0;
-  scroll-padding: 0;
+  overscroll-behavior: none;
 }
 
 @layer utilities {
@@ -32,13 +21,8 @@ body {
   }
 }
 
-/* WebKit Browsers (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
   width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {

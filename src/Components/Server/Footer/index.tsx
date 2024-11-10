@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="bg-black text-white h-32 w-full justify-between align-middle flex items-center overflow-hidden flex-col mt-4">
+    <div className="bg-black text-white h-32 w-full justify-between align-middle flex items-center overflow-hidden flex-col py-4">
       <div className="flex flex-1 justify-between items-center gap-6">
         {footerDataArray.map((item: any, i: number) => (
           <Link
@@ -25,7 +25,7 @@ const Footer = () => {
           </Link>
         ))}
       </div>
-      <div className="text-gray-400 font-thin text-[14px] mb-4">
+      <div className="text-gray-400 font-thin text-[14px]">
         Khizer Hussain <span className="text-primary">&#64; 2024</span>
       </div>
     </div>

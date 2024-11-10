@@ -27,10 +27,12 @@ const Header = () => {
   return (
     <header
       className={`${
-        scrolled ? "bg-black text-white z-50" : "bg-transparent z-0"
-      } flex justify-between w-full items-center h-20 pt-12 pb-12 sticky top-0 pr-6 pl-6 md:pr-36 md:pl-36 transition-colors duration-500 overflow-hidden`}
+        scrolled || menuOpen
+          ? "bg-black z-10" // Scrolled or open state
+          : "bg-transparent z-10" // Initial transparent state
+      } text-white flex -mt-24 justify-between sticky w-full items-center h-20 pt-12 pb-12 top-0 pr-6 pl-6 md:pr-36 md:pl-36 transition-colors duration-500`}
     >
-      <div className="text-lg font-bold text-[24px] w-full">
+      <div className="text-lg font-bold text-[2 4px] w-full">
         <Link href="/">
           <span className="text-primary">K</span>
           <span>hizer Hussain.</span>

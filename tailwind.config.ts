@@ -9,8 +9,6 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
         back: "#ffffff",
         for: "#171717",
         primary: "#e31b6d",
@@ -20,9 +18,5 @@ const config: Config = {
     },
   },
   plugins: [],
-  experimental: {
-    optimizeUniversalDefaults: true,
-    matchVariant: true,
-  },
 };
 export default config;

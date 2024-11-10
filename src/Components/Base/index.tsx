@@ -18,13 +18,13 @@ const Projects = dynamic(() => import("@/Components/Client/Portfolio"), {
 
 const Base = () => {
   return (
-    <div className="w-full">
+    <>
       <HeroSection />
       <AboutMe />
       <Services />
       <Projects />
       <Contact />
-    </div>
+    </>
   );
 };
 

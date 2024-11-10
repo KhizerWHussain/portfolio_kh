@@ -24,10 +24,11 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <main className="overflow-x-hidden">
+        <main className="overflow-hidden">
           <Parallax_Provider>{children}</Parallax_Provider>
-          <Footer />
+          {children}
         </main>
+        <Footer />
       </body>
     </html>
   );

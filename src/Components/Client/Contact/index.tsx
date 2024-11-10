@@ -59,7 +59,7 @@ const Contact = () => {
 
   return (
     <div
-      className="flex h-screen w-screen pl-0 pr-0 md:pl-36 md:pr-36 justify-center items-center bg-thirdly"
+      className="flex h-screen w-full pl-0 pr-0 md:pl-36 md:pr-36 justify-center items-center bg-thirdly"
       id="contact"
     >
       <div className="w-full p-8 rounded-lg">

@@ -17,10 +17,10 @@ const Profile = () => {
           />
         </div>
         <p className="text-center w-80 font-thin text-gray-500">
-          I am a Full Stack Developer with 1 year of experience in building
-          scalable web applications using React.js, Next.js, Node.js, and
-          MongoDB. I focus on delivering efficient code and seamless user
-          experiences across both frontend and backend.
+          I am a Full Stack Developer with 1 and a half year of experience in
+          building scalable web applications using React.js, Next.js, Node.js,
+          nest.js, express and MongoDB. I focus on delivering efficient code and
+          seamless user experiences across both frontend and backend.
         </p>
       </div>
     </div>

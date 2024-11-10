@@ -33,7 +33,6 @@ const Services = () => {
   return (
     <section id="services" className="py-20 bg-gray-100" ref={ref}>
       <div className="container mx-auto text-center">
-        {/* <h2 className="text-3xl font-bold mb-10 text-gray-600">My Services</h2> */}
         <h1 className="font-bold text-[44px] underline text-gray-800">
           Services
         </h1>
