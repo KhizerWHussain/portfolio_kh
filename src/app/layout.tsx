@@ -26,7 +26,6 @@ export default function RootLayout({
         <Header />
         <main className="overflow-hidden">
           <Parallax_Provider>{children}</Parallax_Provider>
-          {children}
         </main>
         <Footer />
       </body>

@@ -4,16 +4,18 @@ import CustomImage from "@/Components/Server/CustomImage";
 
 const FrontCard = ({ item }: any) => {
   return (
-    <div
-      className={`${style.flip_card_front} bg-blue-600 text-white rounded-lg shadow-md flex w-full h-full justify-center items-center`}
-    >
-      <div className="p-6 flex justify-center items-center flex-col w-full h-full">
-        {/* <CustomImage
+    <div className={`${style.flip_card_front}`}>
+      <div className="p-2 flex justify-center items-center rounded-[2em] w-full h-full">
+        <CustomImage
           alt="Project"
-          image={"https://via.placeholder.com/300"}
-          className="w-full h-full object-cover rounded-lg"
-        /> */}
-        <h1>Hover me</h1>
+          image={item.thumbnail.src}
+          className="w-full h-full object-contain rounded-[2em] justify-center items-center"
+          blurDataURL={item.thumbnail.blurDataURL}
+          fetchPriority="high"
+          imageQuality={100}
+          havePriority={true}
+          optimizeImage={true}
+        />
       </div>
     </div>
   );

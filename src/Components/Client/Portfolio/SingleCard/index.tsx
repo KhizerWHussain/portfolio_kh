@@ -5,7 +5,7 @@ import FrontCard from "./FrontCard";
 
 const Project = ({ item }: any) => {
   return (
-    <div className={style.flip_card}>
+    <div className={`${style.flip_card} mb-6`}>
       <div className={style.flip_card_inner}>
         <FrontCard item={item} />
         <BackCard item={item} />
