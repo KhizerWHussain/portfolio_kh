@@ -26,7 +26,7 @@ const Skills = ({ controls }: any) => {
             className="relative group m-2 flex items-center justify-center w-28 mt-2 over:scale-125 transition-transform duration-500 transform"
             key={i}
           >
-            <div className="h-15 w-15 object-contain">
+            <div className="h-15 w-15 object-contain hover:scale-105 transtion duration-300">
               <CustomImage
                 image={skill.icon}
                 alt={skill.name}

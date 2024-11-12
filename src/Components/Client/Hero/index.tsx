@@ -3,6 +3,12 @@ import React from "react";
 import Writing from "@/Components/Server/TypeWriter";
 import { motion, Variants } from "framer-motion";
 import style from "../../../app/layout.module.css";
+import {
+  ParallaxBanner,
+  ParallaxBannerLayer,
+  ParallaxProvider,
+} from "react-scroll-parallax";
+import ReverseImage from "../../../../assets/images/image-reverse.png";
 
 const textVariants: Variants = {
   hidden: { x: "-100vw", opacity: 0 },
@@ -46,8 +52,23 @@ const HeroSection = () => {
             />
           </div>
         </motion.div>
-        <div className={`${style.myImage}`} />
       </div>
+      <div className={`${style.myImage}`} />
+      {/* <div className="w-full h-full overflow-hidden relative">
+        <ParallaxBanner
+          suppressHydrationWarning={true}
+          layers={[
+            {
+              image: ReverseImage.src,
+              speed: 0,
+              // translateY: [0, 200],
+              expanded: false,
+              // opacity: [1, 0.3],
+            },
+          ]}
+          className="h-screen w-full flex items-center justify-center"
+        />
+      </div> */}
     </div>
   );
 };

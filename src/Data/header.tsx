@@ -157,6 +157,17 @@ import TvThumb from "../../assets/images/techverticks.png";
 import SellersRouteThumb from "../../assets/images/sellersroute.png";
 import Shopify_28_Thumb from "../../assets/images/28.jpg";
 
+import Rnative from "../../assets/tech/React_Native.png";
+import Nodejs from "../../assets/tech/NodeJS.png";
+import Monogdb from "../../assets/tech/MongoDB.png";
+import _React from "../../assets/tech/ReactJS.png";
+import WebIcon from "../../assets/tech/web.png";
+import Nextjs from "../../assets/tech/nextjs-icon.png";
+import Nestjs from "../../assets/tech/Nest.js.png";
+
+import IosIcon from "../../assets/tech/IOS.png";
+import AndroidIcon from "../../assets/tech/Android.png";
+
 // projects section data here
 export const portfolioDataArray = [
   {
@@ -165,9 +176,33 @@ export const portfolioDataArray = [
     companyProject: true,
     slug: "fluospeak",
     type: ["frontend, backend"],
-    // desc: "An English learning app for fluency",
+    duration: "3-6 months",
+    desc: "An English learning app for fluency",
+    techUsed: [
+      {
+        name: "React Native",
+        image: Rnative,
+      },
+      {
+        name: "Node.js",
+        image: Nodejs,
+      },
+      {
+        name: "Mongodb",
+        image: Monogdb,
+      },
+      {
+        name: "React.js",
+        image: _React,
+      },
+    ],
     thumbnail: FluospeakThumb,
-    ios: "https://apps.apple.com/us/app/fluospeak/id6451119605",
+    links: [
+      {
+        url: "https://apps.apple.com/us/app/fluospeak/id6451119605",
+        image: IosIcon,
+      },
+    ],
   },
   {
     id: 2,
@@ -175,8 +210,22 @@ export const portfolioDataArray = [
     companyProject: true,
     slug: "lucidus",
     type: ["frontend"],
+    duration: "1 month",
+    desc: "Unlock the power of advanced data analytics with NextGen Investigations Data. Our cutting-edge platform provides law enforcement agencies with the tools they need to solve cases faster.",
     thumbnail: LucidusThumb,
-    ios: "https://lucidus-brand-website.vercel.app",
+    techUsed: [
+      {
+        name: "Next.js",
+        image: Nextjs,
+        color: "white",
+      },
+    ],
+    links: [
+      {
+        url: "https://lucidus-brand-website.vercel.app",
+        image: WebIcon,
+      },
+    ],
   },
   // {
   //   id: 3,
@@ -196,10 +245,35 @@ export const portfolioDataArray = [
     id: 4,
     name: "Techverticks",
     companyProject: true,
+    desc: "Techverticks company official website",
     slug: "techverticks",
+    duration: "3-6 months",
     type: ["frontend", "backend"],
     thumbnail: TvThumb,
-    ios: "http://techverticks.com",
+    techUsed: [
+      {
+        name: "Node.js",
+        image: Nodejs,
+      },
+      {
+        name: "Mongodb",
+        image: Monogdb,
+      },
+      {
+        name: "Next.js",
+        image: Nextjs,
+      },
+      {
+        name: "Nest.js",
+        image: Nestjs,
+      },
+    ],
+    links: [
+      {
+        url: "http://techverticks.com",
+        image: WebIcon,
+      },
+    ],
   },
   // {
   //   id: 5,
@@ -222,7 +296,36 @@ export const portfolioDataArray = [
     slug: "sellers_route",
     type: ["backend"],
     thumbnail: SellersRouteThumb,
-    ios: "https://apps.apple.com/us/app/sellers-route/id6479336204",
+    duration: "3-6 months",
+    desc: "Manage Sales & Delivery Like a Pro, Sellers Route is a tool designed to boost your sales potential by optimizing your selling process. This simple tool will help you organize your weekly field route, streamline your workflow, and increase the probability of closing deals efficiently. Take control of your sales journey with Sellers Route.",
+    techUsed: [
+      {
+        name: "React Native",
+        image: Rnative,
+      },
+      {
+        name: "Node.js",
+        image: Nodejs,
+      },
+      {
+        name: "Mongodb",
+        image: Monogdb,
+      },
+      {
+        name: "React.js",
+        image: _React,
+      },
+      {
+        name: "Nest.js",
+        image: Nestjs,
+      },
+    ],
+    links: [
+      {
+        url: "https://apps.apple.com/us/app/sellers-route/id6479336204",
+        image: IosIcon,
+      },
+    ],
   },
   // {
   //   id: 7,
@@ -244,23 +347,20 @@ export const portfolioDataArray = [
     companyProject: true,
     slug: "28_shopify",
     type: ["frontend"],
+    duration: "3 months",
+    desc: "Cycle-Based Fitness + Wellness Experience",
     thumbnail: Shopify_28_Thumb,
-    techUsed: ["next.js", "tailwind", "framer-motion"],
-    ios: "https://28.co",
+    techUsed: [
+      {
+        name: "Next.js",
+        image: Nextjs,
+      },
+    ],
+    links: [
+      {
+        url: "https://28.co",
+        image: WebIcon,
+      },
+    ],
   },
-  // {
-  //   id: 9,
-  //   name: "Todo App",
-  //   companyProject: false,
-  //   slug: "todo_app",
-  //   type: "frontend",
-  //   thumbnail: "",
-  //   techUsed: ["react", "redux"],
-  //   links: [
-  //     {
-  //       url: "",
-  //       icon: null,
-  //     },
-  //   ],
-  // },
 ];
