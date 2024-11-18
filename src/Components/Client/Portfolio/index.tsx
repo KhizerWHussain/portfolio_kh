@@ -1,12 +1,26 @@
 "use client";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { portfolioDataArray } from "@/Data/header";
 import SingleProject from "./list";
 import DetailModal from "./list/model";
+interface ProjectType {
+  id: number;
+  name: string;
+  companyProject: boolean;
+  slug: string;
+  type: string[];
+  duration: string;
+  desc: string;
+  techUsed: { name: string; image: any }[];
+  thumbnail: any;
+  links: { url: string; image: any }[];
+}
 
 const Projects = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
-  const [selectedProject, setSelectedProject] = useState<any | null>(null);
+  const [selectedProject, setSelectedProject] = useState<ProjectType | null>(
+    null
+  );
 
   const openModal = (project: any) => {
     setSelectedProject(project);
@@ -18,14 +32,14 @@ const Projects = () => {
     setSelectedProject(null);
   };
 
-  const modelComponent = () => {
-    if (!showModal && !selectedProject) {
+  const modelComponent = useMemo(() => {
+    if (!showModal || !selectedProject) {
       return null;
     }
     return (
       <DetailModal closeModal={closeModal} selectedProject={selectedProject} />
     );
-  };
+  }, [showModal, selectedProject]);
 
   return (
     <>
@@ -44,7 +58,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-      <div>{modelComponent()}</div>
+      <div>{modelComponent}</div>
     </>
   );
 };

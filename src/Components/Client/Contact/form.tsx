@@ -1,70 +1,80 @@
 import React from "react";
+import { Field, ErrorMessage } from "formik";
 
 interface ContactFormProp {
-  handleSubmit: (e: React.FormEvent) => void;
-  formData: any;
-  handleInputChange: (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => void;
+  // formData: any;
+  // handleInputChange: (
+  //   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  // ) => void;
+  isSubmitting: boolean;
 }
 
 const ContactForm = ({
-  handleSubmit,
-  formData,
-  handleInputChange,
+  // formData,
+  // handleInputChange,
+  isSubmitting,
 }: ContactFormProp) => {
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="flex flex-col gap-4 w-full md:w-1/2"
-    >
-      <div>
-        <input
+    <div className="flex flex-col flex-1 gap-4 w-full md:w-1/2 lg:w-1/2">
+      <div className="flex flex-col gap-[2px]">
+        <Field
           type="text"
           id="name"
           name="name"
-          value={formData.name}
-          onChange={handleInputChange}
+          // value={formData.name}
+          // onChange={handleInputChange}
           className="w-full p-3 rounded-md bg-gray-700 text-gray-100 outline-none focus:ring-2 focus:ring-primary"
           placeholder="Enter your name"
-          required
+          required={true}
+        />
+        <ErrorMessage
+          name="name"
+          component="div"
+          className="text-red-500 text-sm mt-2"
         />
       </div>
-
-      <div>
-        <input
+      <div className="flex flex-col gap-[2px]">
+        <Field
           type="email"
           id="email"
           name="email"
-          value={formData.email}
-          onChange={handleInputChange}
+          // value={formData.email}
+          // onChange={handleInputChange}
           className="w-full p-3 rounded-md bg-gray-700 text-gray-100 outline-none focus:ring-2 focus:ring-primary"
           placeholder="Enter your email"
-          required
+          required={true}
+        />
+        <ErrorMessage
+          name="email"
+          component="div"
+          className="text-red-500 text-sm mt-2"
         />
       </div>
-
-      <div>
-        <textarea
+      <div className="flex flex-col gap-[2px]">
+        <Field
           id="message"
           name="message"
-          value={formData.message}
-          onChange={handleInputChange}
+          as="textarea"
+          // value={formData.message}
+          // onChange={handleInputChange}
           className="w-full p-3 h-32 rounded-md bg-gray-700 text-gray-100 outline-none focus:ring-2 focus:ring-primary"
           placeholder="Write your message"
-          required
+          required={true}
+        />
+        <ErrorMessage
+          name="message"
+          component="div"
+          className="text-red-500 text-sm mt-2"
         />
       </div>
-
-      <div>
-        <button
-          type="submit"
-          className="w-full bg-primary text-gray-100 p-3 rounded-md hover:bg-opacity-90 transition-all duration-300"
-        >
-          Send Message
-        </button>
-      </div>
-    </form>
+      <button
+        type="submit"
+        disabled={isSubmitting}
+        className="w-full bg-primary text-gray-100 p-3 rounded-md hover:bg-opacity-90 transition-all duration-300"
+      >
+        Send Message
+      </button>
+    </div>
   );
 };
 

@@ -28,6 +28,8 @@ interface customImageProps {
   role?: string;
   dataAttributes?: { [key: string]: string };
   ref?: ForwardedRef<HTMLImageElement>;
+  captionStyles?: string;
+  accessKey?: string;
 }
 
 export default function CustomImage({
@@ -57,6 +59,8 @@ export default function CustomImage({
   role,
   dataAttributes = {},
   ref,
+  captionStyles,
+  accessKey,
 }: customImageProps) {
   return (
     <figure>
@@ -93,9 +97,12 @@ export default function CustomImage({
         aria-describedby={ariaDescribedBy}
         role={role}
         ref={ref}
+        accessKey={accessKey}
         {...dataAttributes}
       />
-      {caption ? <figcaption>{caption}</figcaption> : null}
+      {caption ? (
+        <figcaption className={captionStyles}>{caption}</figcaption>
+      ) : null}
     </figure>
   );
 }

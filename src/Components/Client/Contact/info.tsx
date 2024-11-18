@@ -29,16 +29,15 @@ const Information = () => {
             </span>
           </div>
         ))}
-        <p className="cursor-pointer w-full bg-primary text-gray-100 p-3 rounded-md hover:bg-opacity-90 transition-all duration-300">
-          <a
-            href={process.env.NEXT_PUBLIC_FIREBASE_RESUME_URL as string}
-            target="_blank"
-            rel="noopener noreferrer"
-            download="Khizer Resume.pdf"
-          >
-            Download my resume
-          </a>
-        </p>
+        <a
+          className="cursor-pointer w-full bg-primary text-gray-100 p-3 rounded-md hover:bg-opacity-90 transition-all duration-300"
+          href={process.env.NEXT_PUBLIC_FIREBASE_RESUME_URL as string}
+          target="_blank"
+          rel="noopener noreferrer"
+          download="Khizer Resume.pdf"
+        >
+          Download my resume
+        </a>
       </div>
     </div>
   );

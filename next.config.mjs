@@ -22,10 +22,9 @@ const nextConfig = {
       {
         hostname: "*",
         protocol: "https",
-      }
-    ]
-  
-  }
+      },
+    ],
+  },
 };
 
 export default nextConfig;

@@ -12,6 +12,7 @@ const SingleProject = ({ item, onClick }: any) => {
       imageQuality={100}
       havePriority={true}
       optimizeImage={true}
+      loadingEase="lazy"
       ClickFunction={() => onClick(item)}
     />
   );
