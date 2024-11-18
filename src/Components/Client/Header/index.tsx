@@ -39,21 +39,17 @@ const Header = () => {
       {!menuOpen ? (
         <nav className="hidden md:flex lg:flex">
           <ul className="flex space-x-4 gap-4">
-            {headerLinksArray.map((link: any, i: number) => {
-              return (
-                <Link
-                  to={link.to}
-                  key={`${link.id}.${i}`}
-                  className="hover:text-primary transition duration-500 text-[20px]"
-                  smooth={true}
-                  duration={500}
-                  aria-label={link.text}
-                  about="header link"
-                >
-                  {link.text}
-                </Link>
-              );
-            })}
+            {headerLinksArray.map((link: any, i: number) => (
+              <Link
+                to={link.to}
+                key={`${link.id}.${i}`}
+                className="hover:text-primary transition duration-500 text-[20px]"
+                smooth={true}
+                duration={500}
+              >
+                {link.text}
+              </Link>
+            ))}
           </ul>
         </nav>
       ) : null}
