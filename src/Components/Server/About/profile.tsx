@@ -14,6 +14,8 @@ const Profile = () => {
             loadingEase="lazy"
             havePriority={false}
             optimizeImage={true}
+            imageQuality={100}
+            fetchPriority="auto"
           />
         </div>
         <p className="text-center w-80 font-thin text-gray-500">

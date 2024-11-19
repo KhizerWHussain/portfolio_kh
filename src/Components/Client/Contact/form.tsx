@@ -2,18 +2,10 @@ import React from "react";
 import { Field, ErrorMessage } from "formik";
 
 interface ContactFormProp {
-  // formData: any;
-  // handleInputChange: (
-  //   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  // ) => void;
   isSubmitting: boolean;
 }
 
-const ContactForm = ({
-  // formData,
-  // handleInputChange,
-  isSubmitting,
-}: ContactFormProp) => {
+const ContactForm = ({ isSubmitting }: ContactFormProp) => {
   return (
     <div className="flex flex-col flex-1 gap-4 w-full md:w-1/2 lg:w-1/2">
       <div className="flex flex-col gap-[2px]">
@@ -21,8 +13,6 @@ const ContactForm = ({
           type="text"
           id="name"
           name="name"
-          // value={formData.name}
-          // onChange={handleInputChange}
           className="w-full p-3 rounded-md bg-gray-700 text-gray-100 outline-none focus:ring-2 focus:ring-primary"
           placeholder="Enter your name"
           required={true}
@@ -38,8 +28,6 @@ const ContactForm = ({
           type="email"
           id="email"
           name="email"
-          // value={formData.email}
-          // onChange={handleInputChange}
           className="w-full p-3 rounded-md bg-gray-700 text-gray-100 outline-none focus:ring-2 focus:ring-primary"
           placeholder="Enter your email"
           required={true}
@@ -56,7 +44,6 @@ const ContactForm = ({
           name="message"
           as="textarea"
           // value={formData.message}
-          // onChange={handleInputChange}
           className="w-full p-3 h-32 rounded-md bg-gray-700 text-gray-100 outline-none focus:ring-2 focus:ring-primary"
           placeholder="Write your message"
           required={true}
