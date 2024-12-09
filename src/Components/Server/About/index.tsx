@@ -35,7 +35,7 @@ const AboutMe = () => {
   return (
     <div
       id="about"
-      className="flex pl-0 pr-0 md:pl-36 md:pr-36 bg-white text-for w-full h-full justify-center align-middle pt-32 pb-32"
+      className="flex pl-0 pr-0 md:pl-36 md:pr-36 bg-white text-for w-full h-full justify-center align-middle pt-32 pb-32 z-10"
       ref={ref}
     >
       <div className="w-full h-full flex flex-col">

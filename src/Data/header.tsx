@@ -74,6 +74,7 @@ import NodeSvg from "../../assets/svg/node.svg";
 import GitSvg from "../../assets/svg/git.svg";
 import JsSvg from "../../assets/svg/js.svg";
 import MongodbSvg from "../../assets/svg/mongo.svg";
+import RedisPng from "../../assets/tech/redis.png";
 
 export const skillsData = [
   { icon: NextSvg, name: "Next.js" },
@@ -84,6 +85,7 @@ export const skillsData = [
   { icon: GitSvg, name: "Git" },
   { icon: JsSvg, name: "Javascript" },
   { icon: MongodbSvg, name: "Mongodb" },
+  { icon: RedisPng, name: "Redis" },
 ];
 
 export const educationDataArray = [

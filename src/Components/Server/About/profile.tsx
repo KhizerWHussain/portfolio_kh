@@ -18,11 +18,12 @@ const Profile = () => {
             fetchPriority="auto"
           />
         </div>
-        <p className="text-center w-80 font-thin text-gray-500">
+        <p className="text-center w-80 md:w-96 font-medium md:font-light text-gray-800">
           I am a Full Stack Developer with 1 and a half year of experience in
           building scalable web applications using React.js, Next.js, Node.js,
-          nest.js, express and MongoDB. I focus on delivering efficient code and
-          seamless user experiences across both frontend and backend.
+          nest.js, express, Postgresql, Redis and MongoDB. I focus on delivering
+          efficient code and seamless user experiences across both frontend and
+          backend.
         </p>
       </div>
     </div>

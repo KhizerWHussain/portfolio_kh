@@ -43,9 +43,11 @@ function RootLayout({ children }: Readonly<RootLayoutProp>) {
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <main className="overflow-hidden">
-          <Parallax_Provider>{children}</Parallax_Provider>
-        </main>
+
+        <Parallax_Provider>
+          <main className="overflow-hidden">{children} </main>
+        </Parallax_Provider>
+
         <Footer />
       </body>
     </html>

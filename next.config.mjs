@@ -6,7 +6,7 @@ const nextConfig = {
   cacheMaxMemorySize: 0,
   cleanDistDir: true,
   productionBrowserSourceMaps: false,
-  output: "export",
+  output: "standalone",
   poweredByHeader: false,
   excludeDefaultMomentLocales: true,
   reactStrictMode: true,
