@@ -1,20 +1,32 @@
 import CustomImage from "@/Components/Server/CustomImage";
 import React from "react";
+import { motion } from "framer-motion";
 
-const SingleProject = ({ item, onClick }: any) => {
+const SingleProject = ({ item, onClick, index }: any) => {
   return (
-    <CustomImage
-      alt="Project"
-      image={item.thumbnail.src}
-      className="w-full h-64 object-contain rounded-[2em] hover:scale-105 transition duration-300 mb-4 resize"
-      blurDataURL={item.thumbnail.blurDataURL}
-      fetchPriority="high"
-      imageQuality={100}
-      havePriority={true}
-      optimizeImage={true}
-      loadingEase="lazy"
-      ClickFunction={() => onClick(item)}
-    />
+    <motion.div
+      className="h-60 w-80"
+      initial={{ opacity: 0, scale: 0.25 }}
+      whileInView={{
+        opacity: 1,
+        scale: 1,
+        transition: { duration: 0.25, delay: index * 0.15, ease: "easeInOut" },
+      }}
+      viewport={{ once: true }}
+    >
+      <CustomImage
+        alt="Project"
+        image={item.thumbnail.src}
+        className="w-80 h-60 min-h-full object-cover rounded-[2em] hover:scale-110 transition duration-300"
+        blurDataURL={item.thumbnail.blurDataURL}
+        fetchPriority="high"
+        imageQuality={100}
+        havePriority={true}
+        optimizeImage={true}
+        loadingEase="lazy"
+        ClickFunction={() => onClick(item)}
+      />
+    </motion.div>
   );
 };
 

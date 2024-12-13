@@ -3,28 +3,25 @@ import CustomImage from "../../CustomImage";
 import { skillsData } from "@/Data/header";
 import { motion } from "framer-motion";
 
-const skillVariants = {
-  hidden: { y: 100, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: { type: "spring", stiffness: 50, damping: 20, duration: 2 },
-  },
-};
-
-const Skills = ({ controls }: any) => {
+const Skills = () => {
   return (
     <div className="flex flex-wrap h-full w-full justify-between">
-      <motion.div
-        variants={skillVariants}
-        initial="hidden"
-        animate={controls}
-        className="flex flex-wrap h-full w-full justify-between"
-      >
+      <div className="flex flex-wrap h-full w-full justify-between">
         {skillsData.map((skill: any, i: number) => (
-          <div
-            className="relative group m-2 flex items-center justify-center w-28 mt-2 over:scale-125 transition-transform duration-500 transform"
+          <motion.div
             key={i}
+            initial={{ y: 100, opacity: 0, scale: 0.5 }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+              scale: 1,
+              transition: {
+                duration: 0.1,
+                delay: i * 0.1,
+                ease: "easeInOut",
+              },
+            }}
+            className="relative group m-2 flex items-center justify-center w-28 mt-2 over:scale-125 transition-transform duration-500 transform"
           >
             <div className="h-15 w-15 object-contain hover:scale-105 transtion duration-300">
               <CustomImage
@@ -32,7 +29,7 @@ const Skills = ({ controls }: any) => {
                 alt={skill.name}
                 height={60}
                 width={60}
-                loadingEase="lazy"
+                loadingEase="eager"
                 havePriority={false}
                 optimizeImage={true}
                 styles={{
@@ -41,9 +38,9 @@ const Skills = ({ controls }: any) => {
                 }}
               />
             </div>
-          </div>
+          </motion.div>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 };

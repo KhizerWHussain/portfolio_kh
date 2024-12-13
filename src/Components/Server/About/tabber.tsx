@@ -1,27 +1,15 @@
-"use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import Skills from "./Tabs/skills";
 import Education from "./Tabs/education";
 import Experience from "./Tabs/experience";
-import { useAnimation, useInView } from "framer-motion";
 
 const Tabber = () => {
   const [activeTab, setActiveTab] = useState<string>("skills");
 
-  const controls = useAnimation();
-  const ref = useRef<HTMLDivElement | null>(null);
-  const isInView = useInView(ref, { once: true });
-
-  useEffect(() => {
-    if (isInView) {
-      controls.start("visible");
-    }
-  }, [isInView, controls, activeTab]);
-
   const renderContent = () => {
     switch (activeTab) {
       case "skills":
-        return <Skills controls={controls} />;
+        return <Skills />;
       case "education":
         return <Education />;
       case "experience":
@@ -38,7 +26,7 @@ const Tabber = () => {
   ];
 
   return (
-    <div className="w-[100vw] md:w-[50%] h-full" ref={ref}>
+    <div className="w-[100vw] md:w-[50%] h-full">
       <div className="flex justify-between md:justify-around border-b w-full pr-4 pl-4 md:pl-0 md:pr-0">
         {btnArray.map((btn) => (
           <button

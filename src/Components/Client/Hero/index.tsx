@@ -13,7 +13,7 @@ const textVariants: Variants = {
     x: 0,
     opacity: 1,
     transition: {
-      duration: 1,
+      duration: 0.75,
       ease: "easeIn",
       delay: 0.25,
     },

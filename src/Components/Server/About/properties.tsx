@@ -1,19 +1,47 @@
 import React from "react";
+import { motion } from "framer-motion";
 
-const Properties = ({ item }: any) => {
+interface PropertiesProp {
+  item: { title: string; icon: any; description: string };
+  index: number;
+}
+
+function getXAxisPosition(index: number): number {
+  switch (index) {
+    case 0:
+      return 100;
+    case 1:
+      return 200;
+    case 2:
+      return 300;
+    case 3:
+      return 400;
+  }
+}
+
+const Properties = ({ item, index }: PropertiesProp) => {
   const { title, icon, description } = item;
   return (
-    <div className="flex flex-col gap-1.5 text-for align-middle justify-center text-center md:mb-0 mb-8">
+    <motion.div
+      initial={{ x: getXAxisPosition(index), opacity: 0 }}
+      whileInView={{
+        x: 0,
+        opacity: 1,
+        transition: { duration: 1, delay: index * 0.15 },
+      }}
+      viewport={{ once: true }}
+      className="flex w-full flex-col gap-2 text-for align-middle justify-center text-center z-10"
+    >
       <div className="flex text-center w-full align-middle justify-center">
-        <div className="bg-secondary p-8 rounded-full">{icon}</div>
+        <div className="bg-secondary p-8 rounded-full hover:scale-110 duration-300">
+          {icon}
+        </div>
       </div>
-      <h1 className="font-semibold text-[24px] text-gray-900 pr-4 pl-4 md:pr-0 md:pl-0">
-        {title}
-      </h1>
-      <p className="font-medium md:font-light text-lg text-gray-800 pr-8 pl-8 md:pr-4 md:pl-4">
+      <h1 className="font-semibold text-[24px] text-gray-700 mt-2">{title}</h1>
+      <p className="font-thin text-[16px] text-gray-500 pr-8 pl-8">
         {description}
       </p>
-    </div>
+    </motion.div>
   );
 };
 

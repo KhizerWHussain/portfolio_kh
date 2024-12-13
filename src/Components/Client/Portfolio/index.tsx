@@ -3,6 +3,7 @@ import React, { useMemo, useState } from "react";
 import { portfolioDataArray } from "@/Data/header";
 import SingleProject from "./list";
 import DetailModal from "./list/model";
+
 interface ProjectType {
   id: number;
   name: string;
@@ -45,20 +46,25 @@ const Projects = () => {
     <>
       <div
         id="portfolio"
-        className="bg-black py-12 flex min-h-screen max-h-full w-screen pl-0 pr-0 md:pl-36 md:pr-36 text-white last:items-center justify-center"
+        className="bg-black py-12 h-screen min-h-[150vh] flex flex-col w-screen pl-0 pr-0 md:pl-36 md:pr-36 text-white last:items-center justify-center"
       >
-        <div className="flex flex-col gap-6 w-full h-full max-w-full">
+        <div className="flex flex-col gap-4 w-full h-full max-w-full justify-center items-center">
           <h1 className="font-bold text-[44px] underline text-gray-100 text-center">
             Projects
           </h1>
-          <div className="flex justify-center items-center flex-wrap h-full w-full gap-4">
+          <div className="flex justify-center items-center flex-wrap h-full w-full gap-8">
             {portfolioDataArray.map((item: any, i: number) => (
-              <SingleProject key={i} item={item} onClick={openModal} />
+              <SingleProject
+                key={i}
+                item={item}
+                onClick={openModal}
+                index={i}
+              />
             ))}
           </div>
         </div>
       </div>
-      <div>{modelComponent}</div>
+      {modelComponent}
     </>
   );
 };
