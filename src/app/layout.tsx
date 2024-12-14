@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Parallax_Provider } from "@/Components/Client/Provider_Parallax";
-import dynamic from "next/dynamic";
-import { ReactNode } from "react";
+import { ReactNode, lazy, Suspense } from "react";
 
-const Footer = dynamic(() => import("@/Components/Server/Footer"));
-import Header from "@/Components/Client/Header";
+const Footer = lazy(() => import("@/Components/Server/Footer"));
+const Header = lazy(() => import("@/Components/Client/Header"));
 
 import { Inter } from "next/font/google";
 
@@ -42,13 +41,17 @@ function RootLayout({ children }: Readonly<RootLayoutProp>) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
+        <Suspense fallback={null}>
+          <Header />
+        </Suspense>
 
         <Parallax_Provider>
           <main className="overflow-hidden">{children} </main>
         </Parallax_Provider>
 
-        <Footer />
+        <Suspense fallback={null}>
+          <Footer />
+        </Suspense>
       </body>
     </html>
   );

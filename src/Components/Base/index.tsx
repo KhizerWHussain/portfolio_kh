@@ -1,20 +1,19 @@
-"use client";
 import React from "react";
 import dynamic from "next/dynamic";
 const HeroSection = dynamic(() => import("@/Components/Client/Hero"), {
-  ssr: false,
+  ssr: true,
 });
 const AboutMe = dynamic(() => import("@/Components/Server/About"), {
-  ssr: false,
+  ssr: true,
 });
 const Services = dynamic(() => import("@/Components/Server/Service"), {
-  ssr: false,
+  ssr: true,
 });
 const Contact = dynamic(() => import("@/Components/Client/Contact"), {
-  ssr: false,
+  ssr: true,
 });
 const Projects = dynamic(() => import("@/Components/Client/Portfolio"), {
-  ssr: false,
+  ssr: true,
 });
 
 const Base = () => {

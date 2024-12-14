@@ -6,10 +6,11 @@ const SingleProject = ({ item, onClick, index }: any) => {
   return (
     <motion.div
       className="h-60 w-80"
-      initial={{ opacity: 0, scale: 0.25 }}
+      initial={{ opacity: 0, scale: 0.25, filter: "blur(6px)" }}
       whileInView={{
         opacity: 1,
         scale: 1,
+        filter: "blur(0px)",
         transition: { duration: 0.25, delay: index * 0.15, ease: "easeInOut" },
       }}
       viewport={{ once: true }}
@@ -22,9 +23,9 @@ const SingleProject = ({ item, onClick, index }: any) => {
         fetchPriority="high"
         imageQuality={100}
         havePriority={true}
-        optimizeImage={true}
+        optimize={true}
         loadingEase="lazy"
-        ClickFunction={() => onClick(item)}
+        click={() => onClick(item)}
       />
     </motion.div>
   );

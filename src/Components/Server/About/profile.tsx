@@ -13,7 +13,7 @@ const Profile = () => {
             styles={{ objectFit: "cover" }}
             loadingEase="lazy"
             havePriority={false}
-            optimizeImage={true}
+            optimize={true}
             imageQuality={100}
             fetchPriority="auto"
           />

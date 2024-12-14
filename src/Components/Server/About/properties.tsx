@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -30,7 +31,7 @@ const Properties = ({ item, index }: PropertiesProp) => {
         transition: { duration: 1, delay: index * 0.15 },
       }}
       viewport={{ once: true }}
-      className="flex w-full flex-col gap-2 text-for align-middle justify-center text-center z-10"
+      className="flex w-full flex-col gap-2 text-for align-middle justify-center text-center"
     >
       <div className="flex text-center w-full align-middle justify-center">
         <div className="bg-secondary p-8 rounded-full hover:scale-110 duration-300">

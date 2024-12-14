@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import CustomImage from "../../CustomImage";
 import { skillsData } from "@/Data/header";
@@ -31,7 +32,7 @@ const Skills = () => {
                 width={60}
                 loadingEase="eager"
                 havePriority={false}
-                optimizeImage={true}
+                optimize={true}
                 styles={{
                   height: 100,
                   maxHeight: 100,
