@@ -1,18 +1,18 @@
 import React from "react";
 import dynamic from "next/dynamic";
-const HeroSection = dynamic(() => import("@/Components/Client/Hero"), {
+const HeroSection = dynamic(() => import("@/Components/Hero"), {
   ssr: true,
 });
-const AboutMe = dynamic(() => import("@/Components/Server/About"), {
+const AboutMe = dynamic(() => import("@/Components/About"), {
   ssr: true,
 });
-const Services = dynamic(() => import("@/Components/Server/Service"), {
+const Services = dynamic(() => import("@/Components/Service"), {
   ssr: true,
 });
-const Contact = dynamic(() => import("@/Components/Client/Contact"), {
+const Contact = dynamic(() => import("@/Components/Contact"), {
   ssr: true,
 });
-const Projects = dynamic(() => import("@/Components/Client/Portfolio"), {
+const Projects = dynamic(() => import("@/Components/Portfolio"), {
   ssr: true,
 });
 

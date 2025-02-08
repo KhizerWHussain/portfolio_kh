@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import Writing from "@/Components/Server/TypeWriter";
+import Writing from "@/Custom/TypeWriter";
 import { motion, Variants } from "framer-motion";
-import style from "../../../app/layout.module.css";
-import HeroImage from "../../../../assets/images/image-reverse.png";
+import style from "../../app/layout.module.css";
+import HeroImage from "../../public/assets/images/image-reverse.png";
 import Image from "next/image";
 import { Parallax } from "react-scroll-parallax";
 
@@ -60,7 +60,6 @@ const HeroSection = () => {
             height: "100%",
           }}
           speed={0}
-          // translateY={[-20, 0]}
         >
           <Image
             src={HeroImage}

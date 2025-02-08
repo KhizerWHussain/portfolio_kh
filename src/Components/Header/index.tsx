@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { headerLinksArray } from "@/Data/header";
+import { headerLinksArray } from "@/data/header";
 import { Link } from "react-scroll";
 import MobileHeader from "./mobileHeader";
 import { HiMenu, HiX } from "react-icons/hi";

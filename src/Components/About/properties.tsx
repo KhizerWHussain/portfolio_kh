@@ -38,8 +38,8 @@ const Properties = ({ item, index }: PropertiesProp) => {
           {icon}
         </div>
       </div>
-      <h1 className="font-semibold text-[24px] text-gray-700 mt-2">{title}</h1>
-      <p className="font-thin text-[16px] text-gray-500 pr-8 pl-8">
+      <h1 className="font-semibold text-[24px] text-gray-800 mt-2">{title}</h1>
+      <p className="font-light text-[16px] text-gray-600 pr-8 pl-8">
         {description}
       </p>
     </motion.div>

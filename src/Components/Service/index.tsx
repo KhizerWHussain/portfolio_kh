@@ -1,17 +1,20 @@
 "use client";
-import { servicesDataArray } from "@/Data/header";
+import { servicesDataArray } from "@/data/header";
 import React from "react";
-import CustomImage from "../CustomImage";
+import CustomImage from "../../Custom/CustomImage";
 import { motion } from "framer-motion";
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 bg-gray-100 overflow-hidden">
+    <section
+      id="services"
+      className="py-20 bg-gray-100 overflow-hidden h-screen"
+    >
       <div className="container mx-auto text-center">
         <h1 className="font-bold text-[44px] underline text-gray-800">
           Services
         </h1>
-        <div className="flex flex-wrap align-middle justify-center w-full h-full">
+        <div className="flex flex-wrap align-middle justify-center w-full h-full mt-4">
           {servicesDataArray.map((service: any, i: number) => (
             <motion.div
               key={i}
@@ -26,7 +29,7 @@ const Services = () => {
                 ease: "anticipate",
               }}
               viewport={{ once: true }}
-              className="bg-white shadow-lg group rounded-lg p-6 m-4 w-full md:w-[30%] transition-all duration-500 transform hover:scale-105 hover:bg-secondary hover:text-white cursor-pointer flex flex-col justify-between align-middle"
+              className="bg-white shadow-lg h-80 group rounded-lg p-6 m-4 w-full md:w-[30%] transition-all duration-500 transform hover:scale-105 hover:bg-secondary hover:text-white cursor-pointer flex flex-col justify-start gap-0"
             >
               <div className="relative flex items-center justify-center h-24 w-full mb-4">
                 <CustomImage

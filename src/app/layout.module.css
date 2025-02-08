@@ -1,5 +1,5 @@
 .myImage {
-  background-image: url("../../assets/images/image-reverse.png");
+  background-image: url("../public/assets/images/image-reverse.png");
   /* background-image: url("../../assets/images/image_new.png"); */
   object-fit: contain; /* Ensure the image fits within its container */
   background-attachment: fixed; /* Parallax fixed effect */

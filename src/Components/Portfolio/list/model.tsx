@@ -1,10 +1,10 @@
-import CustomImage from "@/Components/Server/CustomImage";
+import CustomImage from "@/Custom/CustomImage";
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 
 interface DetailModal {
-  closeModal: () => void;
+  closeModal: VoidFunction;
   selectedProject: any;
 }
 
@@ -13,9 +13,9 @@ const DetailModal = ({ closeModal, selectedProject }: DetailModal) => {
     <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
       <motion.div
         className="bg-black w-full md:w-[40%] p-6 rounded-lg shadow-lg relative overflow-hidden"
-        initial={{ scale: 0.5 }}
+        initial={{ scale: 0.85 }}
         whileInView={{
-          scale: 1.2,
+          scale: 1.15,
           transition: { duration: 0.4, ease: "linear", bounce: 0.75 },
         }}
       >
@@ -30,7 +30,7 @@ const DetailModal = ({ closeModal, selectedProject }: DetailModal) => {
             {selectedProject.name}
           </h2>
           <p className="cursor-pointer text-base text-gray-400 hover:text-gray-300">
-            {selectedProject.desc}
+            {selectedProject.desc || "description not available"}
           </p>
           <h3 className="text-sm text-gray-400">
             duration: {`(${selectedProject.duration})`}
@@ -59,32 +59,36 @@ const DetailModal = ({ closeModal, selectedProject }: DetailModal) => {
               </motion.div>
             ))}
           </div>
-          <h3 className="font-semibold text-gray-200">Links:</h3>
-          <div className="w-full flex flex-wrap items-center justify-start gap-2">
-            {selectedProject.links.map((item: any, i: number) => (
-              <motion.div
-                key={i}
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{
-                  y: 0,
-                  opacity: 1,
-                  transition: {
-                    duration: 1,
-                    ease: "easeInOut",
-                    delay: i * 0.15,
-                  },
-                }}
-              >
-                <Link href={item.url} target="_blank">
-                  <CustomImage
-                    image={item.image}
-                    alt={item.name || "link"}
-                    className="w-10 h-10 hover:scale-105 transition-all duration-300"
-                  />
-                </Link>
-              </motion.div>
-            ))}
-          </div>
+          {selectedProject?.links && selectedProject?.links?.length > 0 ? (
+            <>
+              <h3 className="font-semibold text-gray-200">Links:</h3>
+              <div className="w-full flex flex-wrap items-center justify-start gap-2">
+                {selectedProject.links.map((item: any, i: number) => (
+                  <motion.div
+                    key={i}
+                    initial={{ y: 50, opacity: 0 }}
+                    whileInView={{
+                      y: 0,
+                      opacity: 1,
+                      transition: {
+                        duration: 1,
+                        ease: "easeInOut",
+                        delay: i * 0.15,
+                      },
+                    }}
+                  >
+                    <Link href={item.url} target="_blank">
+                      <CustomImage
+                        image={item.image}
+                        alt={item.name || "link"}
+                        className="w-10 h-10 hover:scale-105 transition-all duration-300"
+                      />
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+            </>
+          ) : null}
         </div>
       </motion.div>
     </div>

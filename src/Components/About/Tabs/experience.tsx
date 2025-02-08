@@ -1,4 +1,4 @@
-import { experienceDataArray } from "@/Data/header";
+import { experienceDataArray } from "@/data/header";
 import React from "react";
 
 const Experience = () => {
@@ -10,9 +10,7 @@ const Experience = () => {
             <p className="text-[28px] text-gray-700">{item.job}</p>
             <p className="text-secondary text-[14px]">{item.durationTime}</p>
           </div>
-          <div className="text-black font-black text-[12px]">
-            {item.company}
-          </div>
+          <div className="text-black font-bold text-[12px]">{item.company}</div>
         </div>
       ))}
     </div>

@@ -20,7 +20,7 @@ const Tabber = () => {
     }
   };
 
-  const btnArray = [
+  const btnArray: { text: string; slug: string }[] = [
     { text: "Skills", slug: "skills" },
     { text: "Education", slug: "education" },
     { text: "Experience", slug: "experience" },
@@ -29,17 +29,17 @@ const Tabber = () => {
   return (
     <div className="w-[100vw] md:w-[50%] h-full">
       <div className="flex justify-between md:justify-around border-b w-full pr-4 pl-4 md:pl-0 md:pr-0">
-        {btnArray.map((btn) => (
+        {btnArray.map((tab) => (
           <button
-            key={btn.slug}
+            key={tab.slug}
             className={`p-2 transition duration-500 text-[22px] md:text-[14px] min-w-[30%] ${
-              activeTab === btn.slug
+              activeTab === tab.slug
                 ? "text-secondary font-black"
                 : "text-gray-700"
             }`}
-            onClick={() => setActiveTab(btn.slug)}
+            onClick={() => setActiveTab(tab.slug)}
           >
-            {btn.text}
+            {tab.text}
           </button>
         ))}
       </div>

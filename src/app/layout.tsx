@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Parallax_Provider } from "@/Components/Client/Provider_Parallax";
+import { Parallax_Provider } from "@/Components/Provider_Parallax";
 import { ReactNode, lazy, Suspense } from "react";
 
-const Footer = lazy(() => import("@/Components/Server/Footer"));
-const Header = lazy(() => import("@/Components/Client/Header"));
+const Footer = lazy(() => import("@/Components/Footer"));
+const Header = lazy(() => import("@/Components/Header"));
 
 import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  adjustFontFallback: true,
+  preload: true,
+});
 
 export const metadata: Metadata = {
   title: "Khizer Hussain - Portfolio",

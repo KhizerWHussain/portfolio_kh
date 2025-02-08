@@ -1,4 +1,4 @@
-import { educationDataArray } from "@/Data/header";
+import { educationDataArray } from "@/data/header";
 import React from "react";
 
 const Education = () => {
@@ -10,7 +10,7 @@ const Education = () => {
             <p className="text-[28px] text-gray-700">{item.degree}</p>
             <p className="text-secondary text-[14px]">{item.completionYear}</p>
           </div>
-          <div className="text-black font-black text-[12px]">
+          <div className="text-black font-bold text-[12px]">
             {item.institute}
           </div>
         </div>

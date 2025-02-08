@@ -66,15 +66,15 @@ export const aboutPropertiesLinks = [
 ];
 
 // skills images
-import NextSvg from "../../assets/svg/next.svg";
-import ReactSvg from "../../assets/svg/react.svg";
-import NestSvg from "../../assets/svg/nest.svg";
-import ExpressSvg from "../../assets/svg/express.svg";
-import NodeSvg from "../../assets/svg/node.svg";
-import GitSvg from "../../assets/svg/git.svg";
-import JsSvg from "../../assets/svg/js.svg";
-import MongodbSvg from "../../assets/svg/mongo.svg";
-import RedisPng from "../../assets/tech/redis.png";
+import NextSvg from "../public/assets/svg/next.svg";
+import ReactSvg from "../public/assets/svg/react.svg";
+import NestSvg from "../public/assets/svg/nest.svg";
+import ExpressSvg from "../public/assets/svg/express.svg";
+import NodeSvg from "../public/assets/svg/node.svg";
+import GitSvg from "../public/assets/svg/git.svg";
+import JsSvg from "../public/assets/svg/js.svg";
+import MongodbSvg from "../public/assets/svg/mongo.svg";
+import RedisPng from "../public/assets/tech/redis.png";
 
 export const skillsData = [
   { icon: NextSvg, name: "Next.js" },
@@ -112,9 +112,12 @@ export const experienceDataArray = [
   },
 ];
 
-import frontendSvg from "../../assets/svg/frontend.svg";
-import BackendSvg from "../../assets/svg/backend.svg";
-import JavaSvg from "../../assets/svg/java.svg";
+import frontendSvg from "../public/assets/svg/frontend.svg";
+import BackendSvg from "../public/assets/svg/backend.svg";
+// import JavaSvg from "../public/assets/svg/java.svg";
+// import DotnetSvg from "../public/assets/svg/dotnet.svg";
+import DotnetSvg1 from "../public/assets/svg/dotnet (1).svg";
+// import DotNetPng from "../public/assets/images/dotnet.png";
 
 export const servicesDataArray = [
   {
@@ -129,11 +132,17 @@ export const servicesDataArray = [
       "Creating robust and scalable server-side applications with Node.js, Express, Nest.js and MongoDB.",
     icon: BackendSvg,
   },
+  // {
+  //   title: "Java Development",
+  //   // description: "Developing enterprise-level applications using Java, Spring Boot, and RESTful APIs.",
+  //   description: "Coming Soon",
+  //   icon: JavaSvg,
+  // },
   {
-    title: "Java Development",
-    // description: "Developing enterprise-level applications using Java, Spring Boot, and RESTful APIs.",
+    title: "DotNet Development",
     description: "Coming Soon",
-    icon: JavaSvg,
+    // icon: DotnetSvg,
+    icon: DotnetSvg1,
   },
 ];
 
@@ -153,22 +162,25 @@ export const footerDataArray = [
   },
 ];
 
-import FluospeakThumb from "../../assets/images/fluospeak.png";
-import LucidusThumb from "../../assets/images/lucidus.png";
-import TvThumb from "../../assets/images/techverticks.png";
-import SellersRouteThumb from "../../assets/images/sellersroute.png";
-import Shopify_28_Thumb from "../../assets/images/28.jpg";
+import FluospeakThumb from "../public/assets/images/fluospeak.png";
+import LucidusThumb from "../public/assets/images/lucidus.png";
+import TvThumb from "../public/assets/images/techverticks.png";
+import SellersRouteThumb from "../public/assets/images/sellersroute.png";
+import Shopify_28_Thumb from "../public/assets/images/28.jpg";
+import PlanzeeThumb from "../public/assets/images/planzee.png";
+import InyeThumb from "../public/assets/images/Inye.png";
+import NovaThumb from "../public/assets/images/nova.png";
 
-import Rnative from "../../assets/tech/React_Native.png";
-import Nodejs from "../../assets/tech/NodeJS.png";
-import Monogdb from "../../assets/tech/MongoDB.png";
-import _React from "../../assets/tech/ReactJS.png";
-import WebIcon from "../../assets/tech/web.png";
-import Nextjs from "../../assets/tech/nextjs-icon.png";
-import Nestjs from "../../assets/tech/Nest.js.png";
+import Rnative from "../public/assets/tech/React_Native.png";
+import Nodejs from "../public/assets/tech/NodeJS.png";
+import Monogdb from "../public/assets/tech/MongoDB.png";
+import _React from "../public/assets/tech/ReactJS.png";
+import WebIcon from "../public/assets/tech/web.png";
+import Nextjs from "../public/assets/tech/nextjs-icon.png";
+import Nestjs from "../public/assets/tech/Nest.js.png";
 
-import IosIcon from "../../assets/tech/IOS.png";
-import AndroidIcon from "../../assets/tech/Android.png";
+import IosIcon from "../public/assets/tech/IOS.png";
+import AndroidIcon from "../public/assets/tech/Android.png";
 
 // projects section data here
 export const portfolioDataArray = [
@@ -292,6 +304,35 @@ export const portfolioDataArray = [
   //   ],
   // },
   {
+    id: 5,
+    name: "Planzee",
+    companyProject: true,
+    slug: "planzee",
+    type: ["backend"],
+    duration: "6-8 months",
+    desc: "A Social media app similar to facebook",
+    techUsed: [
+      {
+        name: "React Native",
+        image: Rnative,
+      },
+      {
+        name: "Node.js",
+        image: Nodejs,
+      },
+      {
+        name: "Mongodb",
+        image: Monogdb,
+      },
+      {
+        name: "Nest.js",
+        image: NestSvg,
+      },
+    ],
+    thumbnail: PlanzeeThumb,
+    links: [],
+  },
+  {
     id: 6,
     name: "Sellers Route",
     companyProject: true,
@@ -364,5 +405,51 @@ export const portfolioDataArray = [
         image: WebIcon,
       },
     ],
+  },
+  {
+    id: 9,
+    name: "INYE",
+    companyProject: true,
+    slug: "inye",
+    type: ["frontend"],
+    duration: "1 month",
+    // desc: "Cycle-Based Fitness + Wellness Experience",
+    thumbnail: InyeThumb,
+    techUsed: [
+      {
+        name: "Next.js",
+        image: Nextjs,
+      },
+    ],
+    links: [],
+  },
+  {
+    id: 9,
+    name: "Nova",
+    companyProject: true,
+    slug: "nova",
+    type: ["backend"],
+    duration: "In Progress",
+    desc: "A Beauty salon app",
+    thumbnail: NovaThumb,
+    techUsed: [
+      {
+        name: "Node.js",
+        image: Nodejs,
+      },
+      {
+        name: "ReactNative",
+        image: Rnative,
+      },
+      {
+        name: "Mongodb",
+        image: MongodbSvg,
+      },
+      {
+        name: "Nest.js",
+        image: Nestjs,
+      },
+    ],
+    links: [],
   },
 ];

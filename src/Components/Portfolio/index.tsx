@@ -1,6 +1,6 @@
 "use client";
 import React, { useMemo, useState } from "react";
-import { portfolioDataArray } from "@/Data/header";
+import { portfolioDataArray } from "@/data/header";
 import SingleProject from "./list";
 import DetailModal from "./list/model";
 
@@ -18,41 +18,38 @@ interface ProjectType {
 }
 
 const Projects = () => {
-  const [showModal, setShowModal] = useState<boolean>(false);
   const [selectedProject, setSelectedProject] = useState<ProjectType | null>(
     null
   );
 
   const openModal = (project: any) => {
     setSelectedProject(project);
-    setShowModal(true);
   };
 
   const closeModal = () => {
-    setShowModal(false);
     setSelectedProject(null);
   };
 
   const modelComponent = useMemo(() => {
-    if (!showModal || !selectedProject) {
+    if (!selectedProject) {
       return null;
     }
     return (
       <DetailModal closeModal={closeModal} selectedProject={selectedProject} />
     );
-  }, [showModal, selectedProject]);
+  }, [selectedProject]);
 
   return (
     <>
       <div
         id="portfolio"
-        className="bg-black py-12 h-screen min-h-[150vh] flex flex-col w-screen pl-0 pr-0 md:pl-36 md:pr-36 text-white last:items-center justify-center"
+        className="bg-black py-20 min-h-screen flex flex-col w-screen pl-0 pr-0 md:pl-36 md:pr-36 text-white justify-center items-center"
       >
         <div className="flex flex-col gap-4 w-full h-full max-w-full justify-center items-center">
           <h1 className="font-bold text-[44px] underline text-gray-100 text-center">
             Projects
           </h1>
-          <div className="flex justify-center items-center flex-wrap h-full w-full gap-8">
+          <div className="flex justify-between items-center flex-wrap h-full w-full gap-6 mt-4">
             {portfolioDataArray.map((item: any, i: number) => (
               <SingleProject
                 key={i}

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { footerDataArray } from "@/Data/header";
+import { footerDataArray } from "@/data/header";
 import { motion } from "framer-motion";
 
 function FooterItems() {
