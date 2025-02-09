@@ -35,6 +35,8 @@ export const metadata: Metadata = {
     phoneNumbers: ["+923100024241"],
   },
   publisher: "Vercel",
+  category: "Web",
+  keywords: ["portfolio", "web", "nextjs", "tailwindcss"],
 };
 
 interface RootLayoutProp {
