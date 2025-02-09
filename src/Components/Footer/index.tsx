@@ -4,7 +4,7 @@ import FooterItems from "./Items";
 const Footer = () => {
   return (
     <div className="bg-black text-white h-32 w-full justify-between align-middle flex items-center overflow-hidden flex-col py-4">
-      <div className="flex flex-1 justify-between items-center gap-6">
+      <div className="flex flex-1 justify-between items-center gap-6 overflow-hidden">
         <FooterItems />
       </div>
       <div className="text-gray-400 font-thin text-[14px]">

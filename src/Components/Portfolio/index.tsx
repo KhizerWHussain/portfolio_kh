@@ -1,6 +1,6 @@
 "use client";
 import React, { useMemo, useState } from "react";
-import { portfolioDataArray } from "@/data/header";
+import { portfolioDataArray } from "@/data";
 import SingleProject from "./list";
 import DetailModal from "./list/model";
 

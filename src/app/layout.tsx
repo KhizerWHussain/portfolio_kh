@@ -37,6 +37,7 @@ export const metadata: Metadata = {
   publisher: "Vercel",
   category: "Web",
   keywords: ["portfolio", "web", "nextjs", "tailwindcss"],
+  //
 };
 
 interface RootLayoutProp {

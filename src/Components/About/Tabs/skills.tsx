@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import CustomImage from "../../../Custom/CustomImage";
-import { skillsData } from "@/data/header";
+import { skillsData } from "@/data";
 import { motion } from "framer-motion";
 
 const Skills = () => {

@@ -1,4 +1,4 @@
-import { aboutPropertiesLinks } from "@/data/header";
+import { aboutPropertiesLinks } from "@/data";
 import React from "react";
 import dynamic from "next/dynamic";
 const Properties = dynamic(() => import("./properties"), { ssr: true });

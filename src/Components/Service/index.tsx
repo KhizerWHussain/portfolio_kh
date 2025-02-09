@@ -1,5 +1,5 @@
 "use client";
-import { servicesDataArray } from "@/data/header";
+import { servicesDataArray } from "@/data";
 import React from "react";
 import CustomImage from "../../Custom/CustomImage";
 import { motion } from "framer-motion";

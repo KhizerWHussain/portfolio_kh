@@ -1,4 +1,4 @@
-import { educationDataArray } from "@/data/header";
+import { educationDataArray } from "@/data";
 import React from "react";
 
 const Education = () => {

@@ -1,4 +1,4 @@
-import { experienceDataArray } from "@/data/header";
+import { experienceDataArray } from "@/data";
 import React from "react";
 
 const Experience = () => {
